@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Caroline Boutique</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@400;500&display=swap"
+      rel="stylesheet">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="styles.css">
+    <style>
+      /* Custom Styles */
+      .welcome-section {
+        height: 100vh;
+        background: url('floral dresses/down(1).jpeg') center center/cover no-repeat;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        position: relative;
+      }
+
+      .welcome-section::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.6);
+        /* Adds a dark overlay */
+      }
+
+      .welcome-content {
+        position: relative;
+        z-index: 2;
+      }
+
+      .welcome-content h1 {
+        font-size: 3.5rem;
+      }
+
+      .welcome-content p {
+        font-size: 1.25rem;
+      }
+
+      .welcome-buttons .btn {
+        padding: 20px 30px;
+        font-size: 1.2rem;
+      }
+
+      /* Promotional Section Styling */
+      .promo-section {
+        position: relative;
+        background-color: #f8f9fa;
+        padding: 80px 0;
+        overflow: hidden;
+      }
+
+      .promo-image {
+        width: 100%;
+        height: auto;
+        max-width: 500px;
+        transition: transform 0.8s ease;
+      }
+
+      .promo-text {
+        opacity: 0;
+        transform: translateY(50px);
+        transition: opacity 0.8s ease, transform 0.8s ease;
+      }
+
+      .promo-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 40px;
+        padding: 0 40px;
+      }
+
+      .promo-heading {
+        font-size: 3rem;
+        font-weight: bold;
+        color: #212529;
+        margin-bottom: 20px;
+      }
+
+      .promo-description {
+        font-size: 1.2rem;
+        color: #6c757d;
+        margin-bottom: 30px;
+      }
+
+      .promo-btn {
+        padding: 15px 30px;
+        font-size: 1.2rem;
+        background-color: #198754;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+      }
+
+      .promo-btn:hover {
+        background-color: #155d40;
+      }
+
+      /* Animations */
+      .animate-text {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .animate-image {
+        transform: translateX(0);
+      }
+
+      /* Image enters from the left */
+      .promo-image.animate-image {
+        transform: translateX(0);
+      }
+
+      /* On load, image starts off-screen to the left */
+      .promo-image {
+        transform: translateX(-100%);
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .promo-container {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .promo-image {
+          max-width: 100%;
+        }
+      }
+    </style>
+  </head>
+
+
+
+
+
+
+  <!-- Welcome Section -->
+  <section class="welcome-section">
+    <div class="welcome-content animate__animated animate__fadeInUp">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light py-3">
+        <div class="container">
+          <a class="navbar-brand" href="#">Caroline Boutique</a>
+
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="shop.html">Shop</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="About.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <h1 class="display-4 animate__animated animate__fadeInDown animate__delay-1s">Welcome to Caroline Boutique
+      </h1>
+      <p class="lead animate__animated animate__fadeIn animate__delay-2s">Discover the elegance, style, and beauty
+        of our collection.</p>
+
+      <!-- Call-to-Action Buttons with Animation -->
+      <div class="welcome-buttons mt-4">
+        <a href="index.html" class="btn btn-primary animate__animated animate__zoomIn animate__delay-3s">Shop
+          Now</a>
+        <a href="about.html"
+          class="btn btn-outline-light ms-3 animate__animated animate__zoomIn animate__delay-2s">Learn
+          More</a>
+      </div>
+    </div>
+  </section>
+  <!-- Promotional Section -->
+  <section class="promo-section">
+    <div class="container promo-container">
+      <!-- Promo Text -->
+      <div class="promo-text">
+        <h1 class="promo-heading">Seasonal Sale is Here!</h1>
+        <p class="promo-description">Get up to 50% off on our latest collection. Don't miss out on exclusive deals for a
+          limited time.</p>
+        <button class="promo-btn">Shop Now</button>
+      </div>
+
+      <!-- Promo Image -->
+      <div class="promo-image-container">
+        <img class="promo-image" src="dress31.png" alt="promo-Image">
+      </div>
+    </div>
+  </section>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- JavaScript to Trigger Animation on Scroll -->
+  <script>
+    // When the user scrolls, trigger animation on the promotional section
+    window.addEventListener('scroll', function () {
+      const promoText = document.querySelector('.promo-text');
+      const promoImage = document.querySelector('.promo-image');
+
+      const promoSection = document.querySelector('.promo-section');
+      const sectionPos = promoSection.getBoundingClientRect().top;
+      const screenPos = window.innerHeight / 1.3;
+
+      if (sectionPos < screenPos) {
+        promoText.classList.add('animate-text');
+        promoImage.classList.add('animate-image');
+      }
+    });
+  </script>
+  <!-- Featured Products Section -->
+  <section class="featured-products py-5">
+    <div class="container">
+      <h2 class="text-center mb-5">Featured Products</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card border-0 shadow h-100">
+            <img src="floral dress/download (1).jpeg" alt="Product 1" class="card-img-top">
+            <div class="card-body text-center">
+              <h3 class="card-title">Floral Dress</h3>
+              <p class="card-text text-muted">$120.00</p>
+              <a href="shop.html" class="btn btn-outline-dark">View Details</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card border-0 shadow h-100">
+            <img src="floral dress/download (5).jpeg" alt="Product 2" class="card-img-top">
+            <div class="card-body text-center">
+              <h3 class="card-title">Evening Gown</h3>
+              <p class="card-text text-muted">$220.00</p>
+              <a href="shop.html" class="btn btn-outline-dark">View Details</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card border-0 shadow h-100">
+            <img src="floral dress/download (8).jpeg" alt="Product 3" class="card-img-top">
+            <div class="card-body text-center">
+              <h3 class="card-title">Casual Top</h3>
+              <p class="card-text text-muted">$50.00</p>
+              <a href="#" class="btn btn-outline-dark">View Details</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  </lang=>
+  </br>
+  </br>
+
+  <!-- Promotional Banner -->
+  <section class="promo-banner bg-primary text-white py-5 text-center">
+    <div class="container">
+      <h2>Fall Sale - Up to 50% Off!</h2>
+      <p class="lead">Shop now and enjoy exclusive discounts on selected items.</p>
+      <a href="shop.html" class="btn btn-light btn-lg">Shop Sale</a>
+    </div>
+  </section>
+
+  <!-- New Arrivals Section -->
+  <section class="new-arrivals py-5">
+    <div class="container">
+      <h2 class="text-center mb-5">New Arrivals</h2>
+      <div class="row g-4">
+        <div class="col-md-3">
+          <div class="card border-0 shadow h-100">
+            <img src="floral dress/download (10).jpeg" alt="New Arrival 1" class="card-img-top">
+            <div class="card-body text-center">
+              <h3 class="card-title">Summer Dress</h3>
+              <p class="card-text text-muted">$99.00</p>
+              <a href="shop.html" class="btn btn-outline-dark">View Details</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card border-0 shadow h-100">
+            <img src="floral dress/download (11).jpeg" alt="New Arrival 2" class="card-img-top">
+            <div class="card-body text-center">
+              <h3 class="card-title">Boho Top</h3>
+              <p class="card-text text-muted">$69.00</p>
+              <a href="shop.html" class="btn btn-outline-dark">View Details</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card border-0 shadow h-100">
+            <img src="floral dress/download (12).jpeg" alt="New Arrival 3" class="card-img-top">
+            <div class="card-body text-center">
+              <h3 class="card-title">Maxi Skirt</h3>
+              <p class="card-text text-muted">$80.00</p>
+              <a href="shop.html" class="btn btn-outline-dark">View Details</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card border-0 shadow h-100">
+            <img src="floral dress/download (13).jpeg" alt="New Arrival 4" class="card-img-top">
+            <div class="card-body text-center">
+              <h3 class="card-title">Denim Jacket</h3>
+              <p class="card-text text-muted">$150.00</p>
+              <a href="shop.html" class="btn btn-outline-dark">View Details</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class=" footer bg-dark text-white py-4">
+    <div class="container text-center">
+      <p>&copy; 2024 Caroline Boutique. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+
+  </html>
